@@ -20,12 +20,20 @@ import portal from "@/views/portal";
 import index from "@/views/index";
 
 const router = [
-  { path: "/index", name: "index", title: "首页", meta: {}, component: index },
+  {
+    path: "/index",
+    name: "index",
+    title: "首页",
+    meta: {},
+    plugin: 'monitor',
+    component: index
+  },
   {
     path: "/alarmManagement",
     name: "alarmManagement",
     title: "告警管理",
     meta: {},
+    plugin: 'monitor',
     component: alarmManagement
   },
   {
@@ -33,6 +41,7 @@ const router = [
     name: "alarmHistory",
     title: "告警历史",
     meta: {},
+    plugin: 'monitor',
     component: alarmHistory
   },
   {
@@ -40,6 +49,7 @@ const router = [
     name: "dashboard",
     title: "首页",
     meta: {},
+    plugin: 'monitor',
     component: dashboard
   },
   {
@@ -47,6 +57,7 @@ const router = [
     name: "endpointView",
     title: "对象监控",
     meta: {},
+    plugin: 'monitor',
     component: endpointView
   },
   {
@@ -54,6 +65,7 @@ const router = [
     name: "monitorConfigIndex",
     title: "",
     meta: {},
+    plugin: 'monitor',
     component: monitorConfigIndex,
     redirect: "/monitorConfigIndex/endpointManagement",
     children: [
@@ -62,6 +74,7 @@ const router = [
         name: "endpointManagement",
         title: "对象管理",
         meta: {},
+        plugin: 'monitor',
         component: endpointManagement
       },
       {
@@ -69,6 +82,7 @@ const router = [
         name: "groupManagement",
         title: "组管理",
         meta: {},
+        plugin: 'monitor',
         component: groupManagement
       },
       {
@@ -76,6 +90,7 @@ const router = [
         name: "thresholdManagement",
         title: "阈值配置",
         meta: {},
+        plugin: 'monitor',
         component: thresholdManagement
       },
       {
@@ -83,6 +98,7 @@ const router = [
         name: "logManagement",
         title: "关键字配置",
         meta: {},
+        plugin: 'monitor',
         component: logManagement
       },
       {
@@ -90,6 +106,7 @@ const router = [
         name: "resourceLevel",
         title: "资源层级",
         meta: {},
+        plugin: 'monitor',
         component: resourceLevel
       },
       {
@@ -97,6 +114,7 @@ const router = [
         name: "k8s",
         title: "k8s",
         meta: {},
+        plugin: 'monitor',
         component: k8s
       }
     ]
